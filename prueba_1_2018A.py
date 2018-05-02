@@ -1,3 +1,4 @@
+import math
 print("PRUEBA 1")
 print("Seleccione una figura")
 print("1. Cubo")
@@ -9,11 +10,12 @@ def cubo():
     lado=lado*lado*lado
     print ("El volumen del cubo es: ",lado)
 
-def func2():
+def fun2():
     print ("Func2")
 
-def func3():
-    print("FuncN")
+def esfera(radio):
+    return 3/4*math.pi*radio
+
 
 def defaultFunc():
     print ("ERROR")
