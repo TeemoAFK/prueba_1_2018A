@@ -19,10 +19,11 @@ def esfera(radio):
 opcion = 0
 while (opcion != 5):
     print("PRUEBA 1")
-    print("Volumen de figuras geometricas")
+    print("\tVolumen de figuras Geometricas")
+    print("Por favor seleccione una figura para obtener el volumen:")
     print("1. Cubo")
-    print("2. Piramide base cuadrada")
-    print("3. Piramide base triangular")
+    print("2. Piramide base Cuadrada")
+    print("3. Piramide base Triangular")
     print("4. Esfera")
     print("5. Salir")
     opcion = int(input("Seleccione una opcion: "))
@@ -35,8 +36,8 @@ while (opcion != 5):
         valor1=float(input("Ingrese la altura: "))
         print("Resultado: ", piracuadrada(valor,valor1))
     if (opcion == 3):
-        valor = float(input("Ingrese la base: "))
-        valor1 = float(input("Ingrese la altura: "))
+        valor = float(input("Ingrese la altura: "))
+        valor1 = float(input("Ingrese la base: "))
         print("Resultado: ", piratriangular(valor, valor1))
     if opcion == 4:
         valor = float(input("Ingrese el radio de la esfera: "))
