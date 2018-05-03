@@ -1,31 +1,46 @@
 import math
-print("PRUEBA 1")
-print("Seleccione una figura")
-print("1. Cubo")
-print("2. ")
-print("3. ")
 
-def cubo():
-    lado=float(input("Ingrese el lado del cubo"))
-    lado=lado*lado*lado
-    print ("El volumen del cubo es: ",lado)
+valor = 0
+
+
+def cubo(lado):
+    return lado * lado * lado
+
+
+def fun1():
+    return 0
+
 
 def fun2():
-    print ("Func2")
+    return 0
+
 
 def esfera(radio):
-    return 3/4*math.pi*radio
+    return 3 / 4 * math.pi * radio
 
 
-def defaultFunc():
-    print ("ERROR")
+opcion = 0
+while (opcion != 5):
+    print("PRUEBA 1")
+    print("Volumen de figuras geometricas")
+    print("1. Cubo")
+    print("2. ")
+    print("3. ")
+    print("4. Esfera")
+    print("5. Salir")
+    opcion = int(input("Seleccione una opcion: "))
 
-opcion=int(input("Seleccione una opcion"))
-if(opcion==1):
-    cubo()
-if(opcion==2):
-    func2()
-if(opcion==3):
-    func3()
-if(opcion>3):
-    defaultFunc()
+    if opcion == 1:
+        valor = float(input("Ingrese el lado del cubo"))
+        print("Resultado", cubo(valor))
+    if (opcion == 2):
+        func1()
+    if (opcion == 3):
+        func2()
+    if opcion == 4:
+        valor = float(input("Ingrese el radio de la esfera"))
+        esfera(valor)
+    if opcion == 5:
+        print("Salir")
+    if opcion >= 6:
+        print("Seleccione una opcion correcta")
