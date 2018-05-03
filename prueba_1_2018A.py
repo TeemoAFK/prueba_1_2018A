@@ -2,7 +2,7 @@
 
 #primer ejercicio calculaladora binaria
 
-print("\t\t\tEsta es una  calculadora binaria ")
+print("\t\t\tEsta es una  calculadora binaria")
 print("Se tomara el valor binario de un archivo .txt llamado numero el cual contiene dicho")
 
 binario = open('numero.txt','r')
