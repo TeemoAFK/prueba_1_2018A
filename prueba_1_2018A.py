@@ -1,48 +1,59 @@
-import math
-valor=0
-valor1=0
+#import math
 
-def cubo(lado):
-    return lado * lado * lado
+#primer ejercicio calculaladora binaria
 
-def piracuadrada(base, altura):
-    areabase = base**2
-    return (areabase * altura) / 3
+print("\t\t\tEsta es una  calculadora binaria ")
+print("Se tomara el valor binario de un archivo .txt llamado numero el cual contiene dicho")
 
-def piratriangular(base, altura):
-    areabase=(base*altura)/2
-    return (areabase*altura)/3
+binario = open('numero.txt','r')
+l = binario.readline()
+binario.close()
+print("El numero Binario es: ",l)
 
-def esfera(radio):
-    return 3 / 4 * math.pi * radio
+peso = len(l)
+print(peso)
+b=0
+num=peso-1
+suma =0
+for n in l:
+    num1=int(l[b])*2**num
+    num=num-1
+    b=b-1
+    #print("numro",num1)
+    suma=num1+suma
 
-opcion = 0
-while (opcion != 5):
-    print("PRUEBA 1")
-    print("\tVolumen de figuras Geometricas")
-    print("Por favor seleccione una figura para obtener el volumen:")
-    print("1. Cubo")
-    print("2. Piramide base Cuadrada")
-    print("3. Piramide base Triangular")
-    print("4. Esfera")
-    print("5. Salir")
-    opcion = int(input("Seleccione una opcion: "))
 
-    if opcion == 1:
-        valor = float(input("Ingrese el lado del cubo: "))
-        print("Resultado: ", cubo(valor))
-    if (opcion == 2):
-        valor=float(input("Ingrese la base: "))
-        valor1=float(input("Ingrese la altura: "))
-        print("Resultado: ", piracuadrada(valor,valor1))
-    if (opcion == 3):
-        valor = float(input("Ingrese la altura: "))
-        valor1 = float(input("Ingrese la base: "))
-        print("Resultado: ", piratriangular(valor, valor1))
-    if opcion == 4:
-        valor = float(input("Ingrese el radio de la esfera: "))
-        print("Resultado: ",esfera(valor))
-    if opcion == 5:
-        print("Salir!")
-    if opcion >= 6:
-        print("Seleccione una opcion correcta!!")
+print("El resultado es",suma)
+archivo = open('suma.txt', 'a')
+archivo.write("Vicente Delgado"+'\n')
+archivo.write("El resultado de la suma es: "+'%s'% suma)
+archivo.close()
+
+
+
+# ejercicio dos
+
+palabra = ['v','i','c','e','n','t','e']
+p = int(len(palabra))-1
+print(palabra[2])
+c = 0
+d=palabra
+print(d)
+print(p)
+e=0
+while e<p:
+    d[c] = palabra[p]
+    c = c+1
+    p = p-1
+    e=e+1
+    archivo1 = open('textoinvertido.txt', 'a')
+    archivo1.write( d[c])
+    archivo1.close()
+
+#ejercicio tres
+
+codigo=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
+codificador=[]
+
+
+
